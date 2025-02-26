@@ -35,14 +35,14 @@ const products = [
 
 export const ProductsGrid = () => {
   return (
-    <section className="py-16 bg-secondary">
+    <section className="py-12 md:py-16 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl font-playfair font-bold mb-4">Nossos Produtos</h2>
-          <p className="text-foreground/80">Escolha entre nossa seleção de delícias artesanais</p>
+        <div className="text-center mb-8 md:mb-12 animate-fade-in">
+          <h2 className="text-2xl md:text-3xl font-playfair font-bold mb-3 md:mb-4">Nossos Produtos</h2>
+          <p className="text-sm md:text-base text-foreground/80 px-4">Escolha entre nossa seleção de delícias artesanais</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {products.map((product) => (
             <Card key={product.id} className="overflow-hidden card-hover animate-fade-in">
               <CardHeader className="p-0">
@@ -53,18 +53,18 @@ export const ProductsGrid = () => {
                     className="object-cover w-full h-full"
                   />
                   <div className="absolute top-2 left-2">
-                    <span className="bg-primary px-2 py-1 rounded-full text-sm">
+                    <span className="bg-primary px-2 py-1 rounded-full text-xs md:text-sm">
                       {product.category}
                     </span>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="p-4">
-                <CardTitle className="font-playfair">{product.name}</CardTitle>
-                <p className="text-lg font-semibold mt-2">{product.price}</p>
+              <CardContent className="p-3 md:p-4">
+                <CardTitle className="font-playfair text-base md:text-lg">{product.name}</CardTitle>
+                <p className="text-base md:text-lg font-semibold mt-1 md:mt-2">{product.price}</p>
               </CardContent>
-              <CardFooter className="p-4 pt-0">
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground button-hover">
+              <CardFooter className="p-3 md:p-4 pt-0">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground button-hover text-sm md:text-base">
                   Adicionar ao Carrinho
                 </Button>
               </CardFooter>
