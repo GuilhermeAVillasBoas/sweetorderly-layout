@@ -35,11 +35,11 @@ export const Navigation = () => {
 
           <div className="hidden md:flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
             <Link to="/menu" className="hover:text-primary-foreground transition-colors">Menu</Link>
-            <Link to="/contato" className="hover:text-primary-foreground transition-colors">Contato</Link>
+            <Link to="/contato" className="hover:text-primary-foreground transition-colors font-medium">Contato</Link>
             <Link to="#" className="hover:text-primary-foreground transition-colors">Sobre</Link>
           </div>
 
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center">
             <Button variant="ghost" size="icon" className="button-hover relative">
               <ShoppingBag className="h-5 w-5" />
               <span className="absolute -top-1 -right-1 bg-accent text-xs rounded-full h-5 w-5 flex items-center justify-center">
