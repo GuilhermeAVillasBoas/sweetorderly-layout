@@ -1,7 +1,8 @@
 
-import { ShoppingBag, Menu, Instagram, Phone } from "lucide-react";
+import { ShoppingBag, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   return (
@@ -16,35 +17,29 @@ export const Navigation = () => {
             </SheetTrigger>
             <SheetContent side="left" className="w-[80vw] sm:w-[300px]">
               <div className="py-6">
-                <a href="/" className="text-xl font-playfair font-bold">
+                <Link to="/" className="text-xl font-playfair font-bold">
                   Confeitaria
-                </a>
+                </Link>
               </div>
               <nav className="flex flex-col gap-4">
-                <a href="#" className="block px-2 py-3 hover:text-primary-foreground border-b">Menu</a>
-                <a href="#" className="block px-2 py-3 hover:text-primary-foreground border-b">Sobre</a>
-                <a href="#" className="block px-2 py-3 hover:text-primary-foreground">Contato</a>
+                <Link to="/menu" className="block px-2 py-3 hover:text-primary-foreground border-b">Menu</Link>
+                <Link to="/contato" className="block px-2 py-3 hover:text-primary-foreground border-b">Contato</Link>
+                <Link to="#" className="block px-2 py-3 hover:text-primary-foreground">Sobre</Link>
               </nav>
             </SheetContent>
           </Sheet>
           
-          <a href="/" className="text-xl md:text-2xl font-playfair font-bold">
+          <Link to="/" className="text-xl md:text-2xl font-playfair font-bold">
             Confeitaria
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#" className="hover:text-primary-foreground transition-colors">Menu</a>
-            <a href="#" className="hover:text-primary-foreground transition-colors">Sobre</a>
-            <a href="#" className="hover:text-primary-foreground transition-colors">Contato</a>
+            <Link to="/menu" className="hover:text-primary-foreground transition-colors">Menu</Link>
+            <Link to="/contato" className="hover:text-primary-foreground transition-colors">Contato</Link>
+            <Link to="#" className="hover:text-primary-foreground transition-colors">Sobre</Link>
           </div>
 
           <div className="flex items-center gap-2 md:gap-4">
-            <Button variant="ghost" size="icon" className="button-hover hidden md:flex">
-              <Instagram className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="button-hover">
-              <Phone className="h-5 w-5" />
-            </Button>
             <Button variant="ghost" size="icon" className="button-hover relative">
               <ShoppingBag className="h-5 w-5" />
               <span className="absolute -top-1 -right-1 bg-accent text-xs rounded-full h-5 w-5 flex items-center justify-center">
