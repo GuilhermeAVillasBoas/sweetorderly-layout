@@ -14,15 +14,12 @@ export const Hero = () => {
           <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 text-foreground/80 px-4">
             Descubra nossa seleção de doces artesanais feitos com amor e os melhores ingredientes
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
+          <div className="flex justify-center px-4">
             <Button 
               className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground button-hover"
               asChild
             >
               <Link to="/menu">Ver Cardápio</Link>
-            </Button>
-            <Button variant="outline" className="w-full sm:w-auto button-hover" asChild>
-              <Link to="/order">Fazer Pedido</Link>
             </Button>
           </div>
         </div>

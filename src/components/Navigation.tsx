@@ -33,7 +33,7 @@ export const Navigation = () => {
             Confeitaria
           </Link>
 
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
             <Link to="/menu" className="hover:text-primary-foreground transition-colors">Menu</Link>
             <Link to="/contato" className="hover:text-primary-foreground transition-colors">Contato</Link>
             <Link to="#" className="hover:text-primary-foreground transition-colors">Sobre</Link>
