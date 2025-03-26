@@ -8,8 +8,50 @@ const Contato = () => {
       <Navigation />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto animate-fade-in">
+          <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="text-3xl md:text-4xl font-playfair font-bold mb-8 text-center">Contato</h1>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {/* Seção "Sobre" */}
+              <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 className="text-xl font-playfair font-bold mb-4">Nossa História</h2>
+                <p className="text-foreground/80 mb-4">
+                  Desde 2020, trazemos doçura e alegria para momentos especiais. 
+                  Cada criação é feita com amor, dedicação e ingredientes selecionados.
+                </p>
+                <p className="text-foreground/80 mb-4">
+                  Nossa confeitaria nasceu do sonho de transformar receitas de família em 
+                  experiências memoráveis. Hoje, somos referência em doces artesanais e bolos decorados.
+                </p>
+                <p className="text-lg font-medium text-foreground/90 italic">
+                  "Transformando momentos em doces memórias"
+                </p>
+              </div>
+              
+              {/* Seção Missão e Valores */}
+              <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 className="text-xl font-playfair font-bold mb-4">Missão e Valores</h2>
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="font-medium text-accent">Missão</h3>
+                    <p className="text-foreground/80">Adoçar a vida das pessoas através de produtos artesanais de alta qualidade.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-accent">Visão</h3>
+                    <p className="text-foreground/80">Ser referência em confeitaria artesanal, levando nossos doces para todos os cantos do país.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-accent">Valores</h3>
+                    <ul className="list-disc list-inside text-foreground/80">
+                      <li>Qualidade em cada detalhe</li>
+                      <li>Atendimento personalizado</li>
+                      <li>Compromisso com a satisfação</li>
+                      <li>Inovação constante</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             
             <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

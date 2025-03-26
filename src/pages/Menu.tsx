@@ -3,11 +3,13 @@ import { Navigation } from "@/components/Navigation";
 import { ProductCard } from "@/components/ProductCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { useState } from "react";
+import { getProductsByCategory } from "@/services/products";
 
 type Category = "Todos" | "Bolos" | "Tortas" | "Doces" | "Cupcakes";
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>("Todos");
+  const filteredProducts = getProductsByCategory(selectedCategory);
 
   return (
     <div className="min-h-screen bg-secondary">
@@ -24,7 +26,9 @@ const Menu = () => {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <ProductCard />
+            {filteredProducts.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
         </div>
       </main>
