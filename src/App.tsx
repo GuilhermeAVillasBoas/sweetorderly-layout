@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Menu from "./pages/Menu";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
+import Order from "./pages/Order";
+import CustomOrder from "./pages/CustomOrder";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +23,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/pedido-personalizado" element={<CustomOrder />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

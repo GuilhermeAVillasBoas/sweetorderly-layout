@@ -40,7 +40,7 @@ export const ProductsGrid = () => {
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground button-hover"
                 asChild
               >
-                <Link to="/contato">Fazer Pedido Personalizado</Link>
+                <Link to="/pedido-personalizado">Fazer Pedido Personalizado</Link>
               </Button>
             </CardFooter>
           </Card>
