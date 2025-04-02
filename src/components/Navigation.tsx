@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Link } from "react-router-dom";
 import { useCart } from "@/hooks/useCart";
+import { UserMenu } from "./UserMenu";
 
 export const Navigation = () => {
   const { cart } = useCart();
@@ -41,14 +42,17 @@ export const Navigation = () => {
             <Link to="/contato" className="hover:text-primary-foreground transition-colors font-medium">Contato</Link>
           </div>
 
-          <Link to="/order" className="flex items-center">
-            <Button variant="ghost" size="icon" className="button-hover relative">
-              <ShoppingBag className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 bg-accent text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                {itemCount}
-              </span>
-            </Button>
-          </Link>
+          <div className="flex items-center space-x-2">
+            <Link to="/order" className="flex items-center">
+              <Button variant="ghost" size="icon" className="button-hover relative">
+                <ShoppingBag className="h-5 w-5" />
+                <span className="absolute -top-1 -right-1 bg-accent text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {itemCount}
+                </span>
+              </Button>
+            </Link>
+            <UserMenu />
+          </div>
         </div>
       </div>
     </nav>

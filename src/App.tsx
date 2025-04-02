@@ -10,29 +10,36 @@ import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 import Order from "./pages/Order";
 import CustomOrder from "./pages/CustomOrder";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import { CartProvider } from "./hooks/useCart";
+import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <CartProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/contato" element={<Contato />} />
-            <Route path="/order" element={<Order />} />
-            <Route path="/pedido-personalizado" element={<CustomOrder />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/menu" element={<Menu />} />
+              <Route path="/contato" element={<Contato />} />
+              <Route path="/order" element={<Order />} />
+              <Route path="/pedido-personalizado" element={<CustomOrder />} />
+              <Route path="/registro" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </CartProvider>
+    </AuthProvider>
   </QueryClientProvider>
 );
 
