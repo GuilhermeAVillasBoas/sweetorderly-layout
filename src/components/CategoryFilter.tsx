@@ -1,7 +1,7 @@
 
 import { Button } from "./ui/button";
 
-type Category = "Todos" | "Bolos" | "Tortas" | "Doces" | "Cupcakes";
+type Category = "Todos" | "Bolos" | "Tortas" | "Doces";
 
 interface CategoryFilterProps {
   selectedCategory: Category;
@@ -9,7 +9,7 @@ interface CategoryFilterProps {
 }
 
 export const CategoryFilter = ({ selectedCategory, onCategoryChange }: CategoryFilterProps) => {
-  const categories: Category[] = ["Todos", "Bolos", "Tortas", "Doces", "Cupcakes"];
+  const categories: Category[] = ["Todos", "Bolos", "Tortas", "Doces"];
 
   return (
     <div className="flex flex-wrap gap-2 justify-center">

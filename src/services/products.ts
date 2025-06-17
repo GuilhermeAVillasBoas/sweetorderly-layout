@@ -1,10 +1,11 @@
+
 export type Product = {
   id: number;
   name: string;
   description: string;
   price: number;
   image: string;
-  category: "Bolos" | "Tortas" | "Doces" | "Cupcakes";
+  category: "Bolos" | "Tortas" | "Doces";
   featured?: boolean;
 };
 
@@ -33,7 +34,7 @@ export const products: Product[] = [
     description: "Cupcake de red velvet com cobertura de cream cheese",
     price: 12.90,
     image: "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVkJTIwdmVsdmV0JTIwY3VwY2FrZXxlbnwwfHwwfHx8MA%3D%3D",
-    category: "Cupcakes",
+    category: "Doces",
     featured: true
   }
 ];

@@ -5,7 +5,7 @@ import { CategoryFilter } from "@/components/CategoryFilter";
 import { useState } from "react";
 import { getProductsByCategory } from "@/services/products";
 
-type Category = "Todos" | "Bolos" | "Tortas" | "Doces" | "Cupcakes";
+type Category = "Todos" | "Bolos" | "Tortas" | "Doces";
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>("Todos");
